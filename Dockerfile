@@ -1,4 +1,4 @@
 FROM alpine:3.15
 
-RUN apk add --update cifs-utils -y \
-    && rm -rf /var/cache/apk/*
+RUN set -ex; \
+    apk add --no-cache cifs-utils; 
